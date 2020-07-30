@@ -17,6 +17,8 @@ HTML/CSS/JS
 
 This repo will be initialized with the current HTML/CSS/JS web page version.
 
-More lottery generators will be added shortly.
+Java version lGenGUI03 added.
+
+More lottery generators may be added soon.
 
 
