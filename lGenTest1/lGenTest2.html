@@ -1,0 +1,832 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jake's Lottery Number Generator</title>
+<link href="css/lGenStyleSheet.css" rel="stylesheet" type="text/css">
+<style> 
+.lottoArray {
+	text-align: left;
+	color: rgb(50,50,100);
+}
+
+.numbers {
+	text-align: left;
+	color: rgb(100,100,100);
+}
+    
+section {
+    float: left;
+    max-width:800;
+    margin: 5px;
+    padding: 1em;
+}
+
+article {
+	margin 30px;
+/*    border-left: 1px solid gray;*/
+    padding: 5em;
+    overflow: hidden;
+}
+
+</style>
+</head>
+    
+<body>
+<header role="banner">
+  <h1>Jake's Lucky Lottery Number Generator</h1>
+  <nav role="navigation">
+    <ul>
+      <li><a href="Colorado Lottery.htm" title="Colorado Lottery">Colorado Lottery</a></li>
+      <li><a href="PowerBall.htm" title="PowerBall">PowerBall</a></li>
+      <li><a href="Mega Millions.htm" title="Mega Millions">Mega Millions</a></li>
+      <li><a href="Cash Five.htm" title="Cash Five">Cash Five</a></li>
+    </ul>
+  </nav>
+</header>
+<!--
+    <form action="action_page.php">
+      <select name="games">
+        <option value="Lotto">Lotto</option>
+        <option value="PowerBall">PowerBall</option>
+        <option value="MMillions">MegaMillions</option>
+        <option value="Cash5">Cash5</option>
+      </select>
+    <br><br>
+  <input type="submit">
+</form>
+-->
+<header>
+    <div class="mHeader">
+      <p> <strong>This is not your typical number generator.</strong><br> It uses special filters and tests to select the most probable combinations of numbers to win.</p>			
+      <p><strong>It is easy to use.</strong><br>All you have to do is enter the values which make sense for the game you are playing. Don't worry, if 
+      you use unrealistic numbers or words the generator will default to realistic values. </p>
+        </div>
+    </header>
+<main role="main">
+  <article role="article">    
+      <p> First: enter the number of Most Common Numbers (MCNs) that 
+	      you want in your tickets; Second: enter the number 
+		  of tickets you want generated; Third: hit the Gen button.</p>
+ <aside role="complementary" class="test">
+    <h3>Choose Your Game</h3>
+ <div id="tabContainer">
+		<div id="tabs">
+		  <ul>
+			<li id="Lotto"><a href="#tabPanel1" target="_self">Lotto</a></li>
+			<li id="PowerBall"><a href="#tabPanel2" target="_self">PwrBall</a></li>
+			<li id="Mega"><a href="#tabPanel3" target="_self">Mega</a></li>
+			<li id="Cash5"><a href="#tabPanel4" target="_self">Cash5</a></li>
+		  </ul>
+		</div>
+    <div id="containers">
+      <div id="tabPanel1">
+        <h4>Lotto</h4>
+        <form>
+		<div class="inputSide">
+			<h3 id="yuno">Number of MCNs:</h3><br>
+			<input type="number" id="numMCNs" min="0" max="6" required><br>
+            <h3 id="yuno">Number of Tickets:</h3><br>
+			<input type="number" id="numTicks" min="1" max="10" required><br><br>
+			<button onclick="lGenRandLotto()">Generate</button>
+			<button onclick="clearArr()">Clear</button>
+			<p class="numbers" id="MCN"></p> 
+			<p class="numbers" id="vlcntr"></p> 
+			<p class="numbers" id="comp"></p> 
+		</div>
+		<div class="ticketSide">
+			<p class="lottoArray" align="left">Your Tickets</p>
+			<p class="lottoArray" id="demo0"></p>
+			<p class="lottoArray" id="demo1"></p>
+			<p class="lottoArray" id="demo2"></p>
+			<p class="lottoArray" id="demo3"></p>
+			<p class="lottoArray" id="demo4"></p>
+			<p class="lottoArray" id="demo5"></p> 
+			<p class="lottoArray" id="demo6"></p>
+			<p class="lottoArray" id="demo7"></p>
+			<p class="lottoArray" id="demo8"></p> 
+			<p class="lottoArray" id="demo9"></p>
+		 </div>
+	   </form><br>
+          </div>
+	 </div> 
+    <div class="containers">
+      <div id="tabPanel2">
+        <h4>Power Ball</h4>
+            <form>
+		<div class="inputSide">
+            <h3 id="yuno">Number of MCNs:</h3><br>
+			<input type="number" id="numMCNs" min="0" max="6" required><br>
+            <h3 id="yuno">Number of Tickets:</h3><br>
+			<input type="number" id="numTicks" min="1" max="10" required><br><br>
+			<button onclick="lGenRandPB()">Generate</button>
+			<button onclick="clearArr()">Clear</button>
+			<p class="numbers" id="MCN"></p> 
+			<p class="numbers" id="vlcntr"></p> 
+			<p class="numbers" id="comp"></p> 
+		</div>
+		<div class="ticketSide">
+			<p class="pbArray" align="left">Your Tickets</p>
+			<p class="pbArray" id="demo10"></p>
+			<p class="pbArray" id="demo11"></p>
+			<p class="pbArray" id="demo12"></p>
+			<p class="pbArray" id="demo13"></p>
+			<p class="pbArray" id="demo14"></p>
+			<p class="pbArray" id="demo15"></p> 
+			<p class="pbArray" id="demo16"></p>
+			<p class="pbArray" id="demo17"></p>
+			<p class="pbArray" id="demo18"></p> 
+			<p class="pbArray" id="demo19"></p>
+		 </div>
+	   </form><br>
+      </div>
+        </div>
+    <div class="containers">
+      <div id="tabPanel3">
+        <h4>Mega Millions</h4>
+           <form>
+		<div class="inputSide">
+            <h3 id="yuno">Number of MCNs:</h3><br>
+			<input type="number" id="numMCNs" min="0" max="6" required><br>
+            <h3 id="yuno">Number of Tickets:</h3><br>
+			<input type="number" id="numTicks" min="1" max="10" required><br><br>
+			<button onclick="lGenRandMM()">Generate</button>
+			<button onclick="clearArr()">Clear</button>
+			<p class="numbers" id="MCN"></p> 
+			<p class="numbers" id="vlcntr"></p> 
+			<p class="numbers" id="comp"></p> 
+		</div>
+		<div class="ticketSide">
+			<p class="mmArray" align="left">Your Tickets</p>
+			<p class="mmArray" id="demo20"></p>
+			<p class="mmArray" id="demo21"></p>
+			<p class="mmArray" id="demo22"></p>
+			<p class="mmArray" id="demo23"></p>
+			<p class="mmArray" id="demo24"></p>
+			<p class="mmArray" id="demo25"></p> 
+			<p class="mmArray" id="demo26"></p>
+			<p class="mmArray" id="demo27"></p>
+			<p class="mmArray" id="demo28"></p> 
+			<p class="mmArray" id="demo29"></p>
+		 </div>
+	   </form><br>
+      </div>
+    </div>
+    <div class="containers">
+	  <div id="tabPanel4">
+       <h4>Cash Five</h4>
+            <form>
+		<div class="inputSide">
+            <h3 id="yuno">Number of MCNs:</h3><br>
+			<input type="number" id="numMCNs" min="0" max="6" required><br>
+            <h3 id="yuno">Number of Tickets:</h3><br>
+			<input type="number" id="numTicks" min="1" max="10" required><br><br>
+			<button onclick="lGenRandC5()">Generate</button>
+			<button onclick="clearArr()">Clear</button>
+			<p class="numbers" id="MCN"></p> 
+			<p class="numbers" id="vlcntr"></p> 
+			<p class="numbers" id="comp"></p> 
+		</div>
+		<div class="ticketSide">
+			<p class="c5Array" align="left">Your Tickets</p>
+			<p class="c5Array" id="demo30"></p>
+			<p class="c5Array" id="demo31"></p>
+			<p class="c5Array" id="demo32"></p>
+			<p class="c5Array" id="demo33"></p>
+			<p class="c5Array" id="demo34"></p>
+			<p class="c5Array" id="demo35"></p> 
+			<p class="c5Array" id="demo36"></p>
+			<p class="c5Array" id="demo37"></p>
+			<p class="c5Array" id="demo38"></p> 
+			<p class="c5Array" id="demo39"></p>
+		 </div>
+	   </form><br>
+      </div>
+    </div>
+  </div>
+</aside>
+   
+  </article>
+	
+    
+  
+</main>
+<footer role="contentinfo">
+  <p>&copy; <a href="http://www.Yuno.com" title="Yuno.com" target="_blank">lynda.com</a> | follow me and lynda.com on Twitter! <a href="https://twitter.com/jameswillweb" title="Follow me on Twitter">@jameswillweb</a> <a href="https://twitter.com/lynda" title="Follow lynda.com on Twitter">@lynda</a></p>
+</footer>
+    
+<script type="text/javascript">
+
+// declare globals to hold all the links and all the panel elements
+var tabLinks;
+var tabPanels;
+    
+var vlcntr	= 0;    // variable counter
+var vllimit = 0;         // variable counter limit, set by user    
+var arr = [1, 3, 5, 7, 9, 16];
+// nullarray
+var mcnNull = []; 
+// >8
+var mcnLowLotto	= [1, 3, 4, 7, 11, 13, 16, 17, 20, 21, 22, 23, 26, 27, 33, 34, 35, 38, 39, 41]; 
+// >9
+var mcnMedLotto = [1, 3, 4, 7, 13, 20, 21, 26, 27, 33, 34, 38, 39];
+// >10
+var mcnHighLotto	= [1, 4, 20, 21, 26, 27, 34];
+    
+    var mcnLowPB	= [1, 3, 4, 7, 11, 13, 16, 17, 20, 21, 22, 23, 26, 27, 33, 34, 35, 38, 39, 41]; 
+    
+    var mcnLowMM	= [1, 3, 4, 7, 11, 13, 16, 17, 20, 21, 22, 23, 26, 27, 33, 34, 35, 38, 39, 41]; 
+    
+    var mcnLowC5	= [1, 3, 4, 7, 11, 13, 16, 17, 20, 21, 22, 23, 26, 27, 33, 34, 35, 38, 39, 41]; 
+
+function sort(values) {
+  var length = values.length;
+  for (var i = 1; i < length; ++i) {
+    var temp = values[i];
+    var j = i - 1;
+    for(; j >= 0 && values[j] > temp; --j) {
+      values[j+1] = values[j];
+    }
+    values[j+1] = temp;
+  }
+  return values; 
+}
+ 
+function clearLArr()	{
+	var n = "";
+	document.getElementById("demo0").innerHTML = n;
+	document.getElementById("demo1").innerHTML = n;
+	document.getElementById("demo2").innerHTML = n;
+	document.getElementById("demo3").innerHTML = n;
+	document.getElementById("demo4").innerHTML = n;
+	document.getElementById("demo5").innerHTML = n;
+	document.getElementById("demo6").innerHTML = n;
+	document.getElementById("demo7").innerHTML = n;
+	document.getElementById("demo8").innerHTML = n;
+	document.getElementById("demo9").innerHTML = n;	
+}
+
+function clearPBArr()	{
+	var n = "";
+	document.getElementById("demo10").innerHTML = n;
+	document.getElementById("demo11").innerHTML = n;
+	document.getElementById("demo12").innerHTML = n;
+	document.getElementById("demo13").innerHTML = n;
+	document.getElementById("demo14").innerHTML = n;
+	document.getElementById("demo15").innerHTML = n;
+	document.getElementById("demo16").innerHTML = n;
+	document.getElementById("demo17").innerHTML = n;
+	document.getElementById("demo18").innerHTML = n;
+	document.getElementById("demo19").innerHTML = n;	
+}
+
+function clearMMArr()	{
+	var n = "";
+	document.getElementById("demo20").innerHTML = n;
+	document.getElementById("demo21").innerHTML = n;
+	document.getElementById("demo22").innerHTML = n;
+	document.getElementById("demo23").innerHTML = n;
+	document.getElementById("demo24").innerHTML = n;
+	document.getElementById("demo25").innerHTML = n;
+	document.getElementById("demo26").innerHTML = n;
+	document.getElementById("demo27").innerHTML = n;
+	document.getElementById("demo28").innerHTML = n;
+	document.getElementById("demo29").innerHTML = n;	
+}
+
+function clearC5Arr()	{
+	var n = "";
+	document.getElementById("demo30").innerHTML = n;
+	document.getElementById("demo31").innerHTML = n;
+	document.getElementById("demo32").innerHTML = n;
+	document.getElementById("demo33").innerHTML = n;
+	document.getElementById("demo34").innerHTML = n;
+	document.getElementById("demo35").innerHTML = n;
+	document.getElementById("demo36").innerHTML = n;
+	document.getElementById("demo37").innerHTML = n;
+	document.getElementById("demo38").innerHTML = n;
+	document.getElementById("demo39").innerHTML = n;	
+}
+	
+function lGenRandLotto(){
+	clearArr();
+	var text = "Please enter a valid number";
+	var i;
+	var inpArr = [];
+	var num = document.getElementById("numTicks").value;
+	for(i=0; i<num; i++){		
+        inpArr[i] = genRand(6, 42, mcnLowLotto);
+	}
+	if (num<1 || num>10) {document.getElementById("demo0").innerHTML = text;}
+	else if (num == 1){document.getElementById("demo0").innerHTML = inpArr[0];}
+	else if (num == 2){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];}
+	else if (num == 3){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];}
+	else if (num == 4){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];}
+	else if (num == 5){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];
+		document.getElementById("demo4").innerHTML = inpArr[4];}
+	else if (num == 6){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];
+		document.getElementById("demo4").innerHTML = inpArr[4];
+		document.getElementById("demo5").innerHTML = inpArr[5];}
+	else if (num == 7){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];
+		document.getElementById("demo4").innerHTML = inpArr[4];
+		document.getElementById("demo5").innerHTML = inpArr[5];
+		document.getElementById("demo6").innerHTML = inpArr[6];}
+	else if (num == 8){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];
+		document.getElementById("demo4").innerHTML = inpArr[4];
+		document.getElementById("demo5").innerHTML = inpArr[5];
+		document.getElementById("demo6").innerHTML = inpArr[6];
+		document.getElementById("demo7").innerHTML = inpArr[7];}
+	else if (num == 9){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];
+		document.getElementById("demo4").innerHTML = inpArr[4];
+		document.getElementById("demo5").innerHTML = inpArr[5];
+		document.getElementById("demo6").innerHTML = inpArr[6];
+		document.getElementById("demo7").innerHTML = inpArr[7];
+		document.getElementById("demo8").innerHTML = inpArr[8];}
+	else if (num == 10){
+		document.getElementById("demo0").innerHTML = inpArr[0];
+		document.getElementById("demo1").innerHTML = inpArr[1];
+		document.getElementById("demo2").innerHTML = inpArr[2];
+		document.getElementById("demo3").innerHTML = inpArr[3];
+		document.getElementById("demo4").innerHTML = inpArr[4];
+		document.getElementById("demo5").innerHTML = inpArr[5];
+		document.getElementById("demo6").innerHTML = inpArr[6];
+		document.getElementById("demo7").innerHTML = inpArr[7];
+		document.getElementById("demo8").innerHTML = inpArr[8];
+		document.getElementById("demo9").innerHTML = inpArr[9];};
+	
+    return inputArr;
+}
+    
+    function lGenRandPB(){
+	clearArr();
+	var text = "Please enter a valid number";
+	var i;
+	var inpArr = [];
+	var num = document.getElementById("numTicks").value;
+    var pb = genRandBall(1, 26);
+	for(i=0; i<num; i++){		
+        inpArr[i] = genRand(5, 69, mcnLowPB);
+	}
+	if (num<1 || num>10) {document.getElementById("demo10").innerHTML = text;}
+	else if (num == 1){
+        pb = genRand(1, 26);
+        document.getElementById("demo10").innerHTML = inpArr[0]+ "PB: " + pb;}
+	else if (num == 2){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0]+ "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1]+ "PB: " + pb;}
+	else if (num == 3){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0]+ "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1]+ "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2]+ "PB: " + pb;}
+	else if (num == 4){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0]+ "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1]+ "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;}
+	else if (num == 5){
+		document.getElementById("demo10").innerHTML = inpArr[0] + "PB: " + pb;
+		document.getElementById("demo11").innerHTML = inpArr[1] + "PB: " + pb;
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;
+		document.getElementById("demo14").innerHTML = inpArr[4] + "PB: " + pb;}
+	else if (num == 6){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo14").innerHTML = inpArr[4] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo15").innerHTML = inpArr[5] + "PB: " + pb;}
+	else if (num == 7){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo14").innerHTML = inpArr[4] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo15").innerHTML = inpArr[5] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo16").innerHTML = inpArr[6] + "PB: " + pb;}
+	else if (num == 8){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo14").innerHTML = inpArr[4] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo15").innerHTML = inpArr[5] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo16").innerHTML = inpArr[6] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo17").innerHTML = inpArr[7] + "PB: " + pb;}
+	else if (num == 9){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo14").innerHTML = inpArr[4] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo15").innerHTML = inpArr[5] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo16").innerHTML = inpArr[6] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo17").innerHTML = inpArr[7] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo18").innerHTML = inpArr[8] + "PB: " + pb;}
+	else if (num == 10){
+        pb = genRand(1, 26);
+		document.getElementById("demo10").innerHTML = inpArr[0] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo11").innerHTML = inpArr[1] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo12").innerHTML = inpArr[2] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo13").innerHTML = inpArr[3] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo14").innerHTML = inpArr[4] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo15").innerHTML = inpArr[5] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo16").innerHTML = inpArr[6] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo17").innerHTML = inpArr[7] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo18").innerHTML = inpArr[8] + "PB: " + pb;
+        pb = genRand(1, 26);
+		document.getElementById("demo19").innerHTML = inpArr[9] + "PB: " + pb;};
+	
+    return inputArr;
+}
+    function lGenRandMM(){
+	clearArr();
+	var text = "Please enter a valid number";
+	var i;
+	var inpArr = [];
+        var mb = genRandBall(1, 15);
+	var num = document.getElementById("numTicks").value;
+	for(i=0; i<num; i++){		
+        inpArr[i] = genRand(5, 75, mcnLowMM);
+	}
+	if (num<1 || num>10) {document.getElementById("demo20").innerHTML = text;}
+	else if (num == 1){
+        mb = genRand(1, 15);
+        document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;}
+	else if (num == 2){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;}
+	else if (num == 3){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;}
+	else if (num == 4){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;}
+	else if (num == 5){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo24").innerHTML = inpArr[4] + "MB: " + mb;}
+	else if (num == 6){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo24").innerHTML = inpArr[4] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo25").innerHTML = inpArr[5] + "MB: " + mb;}
+	else if (num == 7){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo24").innerHTML = inpArr[4] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo25").innerHTML = inpArr[5] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo26").innerHTML = inpArr[6] + "MB: " + mb;}
+	else if (num == 8){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo24").innerHTML = inpArr[4] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo25").innerHTML = inpArr[5] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo26").innerHTML = inpArr[6] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo27").innerHTML = inpArr[7] + "MB: " + mb;}
+	else if (num == 9){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo24").innerHTML = inpArr[4] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo25").innerHTML = inpArr[5] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo26").innerHTML = inpArr[6] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo27").innerHTML = inpArr[7] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo28").innerHTML = inpArr[8] + "MB: " + mb;}
+	else if (num == 10){
+        mb = genRand(1, 15);
+		document.getElementById("demo20").innerHTML = inpArr[0] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo21").innerHTML = inpArr[1] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo22").innerHTML = inpArr[2] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo23").innerHTML = inpArr[3] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo24").innerHTML = inpArr[4] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo25").innerHTML = inpArr[5] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo26").innerHTML = inpArr[6] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo27").innerHTML = inpArr[7] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo28").innerHTML = inpArr[8] + "MB: " + mb;
+        mb = genRand(1, 15);
+		document.getElementById("demo29").innerHTML = inpArr[9] + "MB: " + mb;};
+	
+    return inputArr;
+}
+    function lGenRandC5(){
+	clearArr();
+	var text = "Please enter a valid number";
+	var i;
+	var inpArr = [];
+	var num = document.getElementById("numTicks").value;
+	for(i=0; i<num; i++){		
+        inpArr[i] = genRand(5, 32, mcnLowC5);
+	}
+	if (num<1 || num>10) {document.getElementById("demo30").innerHTML = text;}
+	else if (num == 1){document.getElementById("demo30").innerHTML = inpArr[0];}
+	else if (num == 2){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];}
+	else if (num == 3){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];}
+	else if (num == 4){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];}
+	else if (num == 5){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];
+		document.getElementById("demo34").innerHTML = inpArr[4];}
+	else if (num == 6){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];
+		document.getElementById("demo34").innerHTML = inpArr[4];
+		document.getElementById("demo35").innerHTML = inpArr[5];}
+	else if (num == 7){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];
+		document.getElementById("demo34").innerHTML = inpArr[4];
+		document.getElementById("demo35").innerHTML = inpArr[5];
+		document.getElementById("demo36").innerHTML = inpArr[6];}
+	else if (num == 8){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];
+		document.getElementById("demo34").innerHTML = inpArr[4];
+		document.getElementById("demo35").innerHTML = inpArr[5];
+		document.getElementById("demo36").innerHTML = inpArr[6];
+		document.getElementById("demo37").innerHTML = inpArr[7];}
+	else if (num == 9){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];
+		document.getElementById("demo34").innerHTML = inpArr[4];
+		document.getElementById("demo35").innerHTML = inpArr[5];
+		document.getElementById("demo36").innerHTML = inpArr[6];
+		document.getElementById("demo37").innerHTML = inpArr[7];
+		document.getElementById("demo38").innerHTML = inpArr[8];}
+	else if (num == 10){
+		document.getElementById("demo30").innerHTML = inpArr[0];
+		document.getElementById("demo31").innerHTML = inpArr[1];
+		document.getElementById("demo32").innerHTML = inpArr[2];
+		document.getElementById("demo33").innerHTML = inpArr[3];
+		document.getElementById("demo34").innerHTML = inpArr[4];
+		document.getElementById("demo35").innerHTML = inpArr[5];
+		document.getElementById("demo36").innerHTML = inpArr[6];
+		document.getElementById("demo37").innerHTML = inpArr[7];
+		document.getElementById("demo38").innerHTML = inpArr[8];
+		document.getElementById("demo39").innerHTML = inpArr[9];};
+	
+    return inputArr;
+}
+	
+function genRand(size, numb, mcnArray){ 	
+    var   a = [0];// Holds the lotto numbers we pick 
+	var   values = [];// A working register to hold number data
+	var flag;
+    var   d;
+	vlcntr = 0;
+    var   i = 0; // counter
+	while (i < size)
+        {   
+        // Make sure there are no duplicate numbers
+            flag = false;                
+            values[i] = 1 + Math.floor(Math.random() * numb);// Colorado Lotto
+            for(d=0; d<i; d++)
+            {
+                if(a[d] == values[i])
+                {
+                    flag = true;
+                    break;
+                }
+            }
+        // Copy array and increment counter if no duplicates are in the array
+            if(flag == false)
+            {
+                a[i] = values[i];
+                i++;
+            } 
+        // Make sure there are enough MCNs in the array. If not enough MCNs 
+        // are in the array, we reset the counter and repeat the while loop.
+            if (i == size)
+            { 
+				compWMCN(a, mcnArray); // returns vlcntr
+                if (vlcntr < document.getElementById("numMCNs").value)
+                {
+                    i = 0;
+                    vlcntr = 0;  
+                }
+            }           
+        } 
+	sort(values);
+	return values+ "     MCN: " + vlcntr;
+}
+    
+    function genRandBall(size, numb){ 	
+    var   a = [0];// Holds the lotto numbers we pick 
+	var   values = [];// A working register to hold number data
+	var flag;
+    var   d;
+	vlcntr = 0;
+    var   i = 0; // counter
+	while (i < size)
+        {   
+        // Make sure there are no duplicate numbers
+            flag = false;                
+            values[i] = 1 + Math.floor(Math.random() * numb);// Colorado Lotto
+            for(d=0; d<i; d++)
+            {
+                if(a[d] == values[i])
+                {
+                    flag = true;
+                    break;
+                }
+            }
+        // Copy array and increment counter if no duplicates are in the array
+            if(flag == false)
+            {
+                a[i] = values[i];
+                i++;
+            } 
+        // Make sure there are enough MCNs in the array. If not enough MCNs 
+        // are in the array, we reset the counter and repeat the while loop.
+            if (i == size)
+            { 
+				compWMCN(a, mcnArray); // returns vlcntr
+                if (vlcntr < document.getElementById("numMCNs").value)
+                {
+                    i = 0;
+                    vlcntr = 0;  
+                }
+            }           
+        } 
+	sort(values);
+	return values+ "     MCN: " + vlcntr;
+}
+
+
+function compWMCN(a,m){
+	var c = 0;
+	vlcntr = 0;
+	var cnt = 0;
+	var mcnLen = m.length;
+	var aLen = a.length;
+	for (cnt = 0; cnt < aLen; cnt++){
+		for (c = 0; c < mcnLen; c++){
+			if (a[cnt] == m[c])vlcntr++;
+		}
+	}
+	return vlcntr;
+}
+    
+</script>
+</body>
+</html>
