@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="mcnButtonGroup">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="saveButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="resetButton" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="mcnLow" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="drawNum" pref="40" max="32767" attributes="0"/>
+                                  <Component id="mcnNum" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="mcnNumLabel" max="32767" attributes="0"/>
+                                  <Component id="drawNumLabel" pref="89" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="mcnMed" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="mcnHigh" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="save10" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save9" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save8" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save6" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="save1" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="lotto9" alignment="0" pref="140" max="32767" attributes="0"/>
+                                  <Component id="lotto8" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto6" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lotto10" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lottoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="genNumsButton" min="-2" pref="87" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="ballsDrawn" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="clearButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="mcn6" alignment="0" pref="20" max="32767" attributes="0"/>
+                                          <Component id="mcn1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="mcn2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="mcn3" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="mcn4" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="mcn5" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="mcn7" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="mcn8" max="32767" attributes="0"/>
+                                          <Component id="mcn9" max="32767" attributes="0"/>
+                                          <Component id="mcn10" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="ma1" pref="97" max="32767" attributes="0"/>
+                                  <Component id="ma2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma6" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma8" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma9" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ma10" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="62" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="winLoop2" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop1" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop3" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop4" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop5" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop6" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop7" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop8" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop9" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="winLoop10" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="sixWinners" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="sixWinnersLabel" min="-2" pref="82" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="loopMultiplier" min="-2" pref="87" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="loopMultLabel" min="-2" pref="82" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="loopButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="loopCounter" min="-2" pref="76" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="loopCounterLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="numTestLoops" min="-2" pref="87" max="-2" attributes="0"/>
+                                          <Component id="numLoopMCN" min="-2" pref="35" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="numLoopMCNLabel" min="-2" pref="57" max="-2" attributes="0"/>
+                                          <Component id="testLoopLabel" min="-2" pref="82" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lottoLabel" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="clearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ballsDrawn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="genNumsButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="save1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lotto1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="winLoop1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="loopCounterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="loopCounter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="loopButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Component id="ma1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mcn1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="save2" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lotto2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="numLoopMCNLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ma2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mcn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="numLoopMCN" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="winLoop2" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="save3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lotto3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ma3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="testLoopLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mcn3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="numTestLoops" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="winLoop3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="save4" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lotto4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ma4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="loopMultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mcn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="winLoop4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="loopMultiplier" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="save5" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lotto5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sixWinnersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="sixWinners" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="winLoop5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ma5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mcn5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="save6" min="-2" max="-2" attributes="0"/>
+                          <Component id="lotto6" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="mcn6" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ma6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="winLoop6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="save7" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lotto7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ma7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="winLoop7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mcn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="save8" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lotto8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ma8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="winLoop8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mcn8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="save9" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lotto9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="winLoop9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="ma9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="mcn9" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="save10" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lotto10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ma10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="winLoop10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="mcn10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="resetButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mcnNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mcnNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="drawNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="drawNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="mcnLow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mcnMed" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mcnHigh" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lottoLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LottoGen3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto1">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save2">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto2">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save3">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto3">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save4">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save4ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto4">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save5">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save5ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto5">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save6">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save6ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto6">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lotto6ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save7">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save7ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto7">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save8">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save8ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto8">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save9">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save9ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto9">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="save10">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save10ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lotto10">
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ma10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0,0,0,0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="resetButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reset"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="saveButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="mcnNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="drawNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcnNumLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of MCNs"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="drawNumLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of Tickets"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="mcnLow">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="mcnButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MCN Low"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mcnLowActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="mcnMed">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="mcnButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MCN Med"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mcnMedActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="mcnHigh">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="mcnButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MCN High"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mcnHighActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="numLoopMCN">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numLoopMCNLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Loop MCN"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="ballsDrawn">
+    </Component>
+    <Component class="javax.swing.JButton" name="clearButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clear"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="loopButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Loop"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loopButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="numTestLoops">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="testLoopLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Test Loops"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="loopMultiplier">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="loopMultLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Loop Multiplier"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="sixWinners">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="sixWinnersLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="6 Nums Won"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="winLoop10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="loopCounter">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="loopCounterLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Loop Counter"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="genNumsButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Generate"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genNumsButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mcn10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
