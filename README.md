@@ -1,5 +1,5 @@
 # lgentest1
-My lottery generator web page written in HTML/CSS/JS
+My lottery generator repo
 
 I wrote various lottery number generators and analyzers over the years using: 
 
