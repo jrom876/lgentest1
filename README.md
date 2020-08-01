@@ -15,10 +15,8 @@ Bash
 
 HTML/CSS/JS
 
-This repo will be initialized with the current HTML/CSS/JS web page version.
+This repo will be initialized with the current HTML/CSS/JS web page and Java GUI versions.
 
-Java version lGenGUI03 added.
-
-More lottery generators may be added soon.
+More lottery generators to be added soon.
 
 
